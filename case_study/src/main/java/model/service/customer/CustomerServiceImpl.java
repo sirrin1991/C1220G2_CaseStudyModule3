@@ -24,7 +24,7 @@ public class CustomerServiceImpl implements CustomerService {
     public Map<String,String> add(Customer customer) {
         Map<String,String> mapError = new HashMap<>();
         if (!Validation.validateNameOrAddress(customer.getName())){
-            mapError.put("name","Invalid format . (ex : Abc Abc) ");
+            mapError.put("name","Invalid format . (ex : Abc Abc).");
         }
 
         if (!Validation.validateCustomerCode(customer.getCustomerCode())){
@@ -48,7 +48,7 @@ public class CustomerServiceImpl implements CustomerService {
         }
 
         if(mapError.isEmpty()){
-            if(!customerRepository.add(customer)){
+            if(!customerRepository.add(customer)){ //true => !true == false // false => !false == true
                 mapError.put("error","Something wrong, try again");
             }
         }

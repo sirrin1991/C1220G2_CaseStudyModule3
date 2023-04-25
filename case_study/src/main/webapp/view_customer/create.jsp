@@ -83,10 +83,13 @@
                         </tr>
                         <tr>
                             <td><label for="cd">Customer's code: </label></td>
-                            <td><input type="text" id="cd" name="code" value="${customer.customerCode}">
-                                <p style="color: red"><c:if test="${mapError.get('code') != null}"/>
-                                    <c:out value="${mapError.get('code')}"/>
-                                </p></td>
+                            <td><input type="text" id="cd" name="code" value="${customer.customerCode}"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><p style="color: red"><c:if test="${mapError.get('code') != null}"/>
+                                <c:out value="${mapError.get('code')}"/>
+                            </p></td>
                         </tr>
                         <tr>
                             <td><label for="fn">Customer's name: </label></td>
